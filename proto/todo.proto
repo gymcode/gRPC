@@ -3,9 +3,11 @@ syntax = "proto3";
 package TodoPackage;
 
 service Todo{
-    rpc createTodo (TodoItem) returns (TodoItem);
-    rpc getAllTodos returns (TodoItems);
+    rpc createTodo(TodoItem) returns (TodoItem);
+    rpc getAllTodos(paramless) returns (TodoItems);
 };
+
+message paramless {}
 
 message TodoItem {
     int64 id = 1;
