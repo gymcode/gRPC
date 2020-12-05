@@ -2,12 +2,12 @@ syntax = "proto3";
 
 package todoPackage;
 
-service Todo{
+service Todo {
     rpc createTodo(TodoItem) returns (TodoItem);
     rpc getAllTodos(paramless) returns (TodoItems);
 };
 
-message paramless {}
+message paramless {};
 
 message TodoItem {
     int64 id = 1;
@@ -16,4 +16,4 @@ message TodoItem {
 
 message TodoItems {
     repeated TodoItem todoItems = 1;
-}
+};
